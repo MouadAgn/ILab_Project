@@ -127,8 +127,12 @@
                             <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
                                 SecondTest
                             </a>
+                            <br><br><br>
+                            
                         </div>
                     </div>
+
+                    <a href="#">TablePage</a>
 
                     <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
