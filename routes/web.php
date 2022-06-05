@@ -79,7 +79,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::view('/test','test');
 
-<<<<<<< HEAD
 Route::view('/users','users');
 
 Route::view('body', 'layouts.body');
@@ -90,9 +89,9 @@ Route::group (['prefix' => 'etudiant','as'=>'etudiant.'], function() {
     Route::view('profile', 'Students.profile')->name('profile');
     Route::view('notes', 'Students.notes')->name('notes');
 });
-=======
+
 Route::view('/Results','TestTable');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
->>>>>>> 0103edfca879ec1eaf2dc75b6ebd17cc1bf22da4
+
