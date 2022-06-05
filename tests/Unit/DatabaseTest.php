@@ -13,6 +13,6 @@ class DatabaseTest extends TestCase
      */
     public function test_example()
     {
-        $this->assertTrue(true);
+        $this->assertDatabaseHas('users',['email'=>'elouakili16@gmail.com']);
     }
 }
