@@ -149,7 +149,7 @@
                 float: left;
                 padding: 20px 30px;
                 margin-left: 200px;
-                margin-top: 200px;
+                margin-top: 50px;
                 width: 80%;
                 padding-top: 30px;
             }
@@ -167,7 +167,14 @@
             }
 
            
-
+            .title
+            {
+                background-color: white;
+                margin-top: 100px;
+                height: 130px;
+                width: 100%;
+                float: right; 
+            }
             
 
 
@@ -212,6 +219,9 @@
         
     </div>
 
+    <section class="title">
+        <h1 style="margin-left: 100px; margin-top: 40px;">Plantillas</h1>
+    </section>
     
     <section class="clinicas">
 
