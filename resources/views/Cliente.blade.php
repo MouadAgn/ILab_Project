@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Clinicas</title>
+    <title>Cliente</title>
 
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
@@ -174,7 +174,7 @@
             }
 
            
-
+           
            
                
 
@@ -233,17 +233,33 @@
             <div class="container">
 
                 <form>
-                    <div class="col-xs-3"">
-                      <label for="clinica">Buscar por Nombre o Prescriptor</label>
-                      <input type="text" class="form-control" id="clinica_input" aria-describedby="clinica" placeholder="" size="10">
-                      
-                    </div>
-                    <button class="search_button"><span class="glyphicon glyphicon-search"></span></button> 
+
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="col-xs-3"">
+                                <label for="clinica">Buscar por Nombre </label>
+                                <input type="text" class="form-control" id="clinica_input" aria-describedby="clinica" placeholder="" size="10">
+                                
+                        </div>
+                        
+                        <div class="col-sm">
+                            <div class="col-xs-3"">
+                                <label for="clinica">Buscar por Nombre </label>
+                                <input type="text" class="form-control" id="clinica_input" aria-describedby="clinica" placeholder="" size="10">
+                                
+                            </div>
+                            
+                     
+                      </div>
+
+                   
+
+                   
 
                     
-                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#agregar_clinica" style="float:right; margin-top: 15px;"><i class="fa fa-plus"></i> &nbsp; Agregar Clinica</button>
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#agregar_clinica" style="float:right; margin-top: 15px;"><i class="fa fa-plus"></i> &nbsp; Agregar Cliente</button>
 
-
+                    
                     
 
                     
@@ -251,7 +267,7 @@
                     <br><br>
                     <hr class="h_line">
                     <br>
-                    
+                    <br><br>
                     <label>Mostrar</label>
 
                     <button type="button" class="btn btn-light" style="float:right; margin-top: 15px;">

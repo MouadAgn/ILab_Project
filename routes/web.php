@@ -94,6 +94,10 @@ Route::view('/Informes','Informes');
 
 Route::view('/Clinicas','Clinicas');
 
+Route::view('/Plantillas','Plantillas');
+
+Route::view('/Cliente','Cliente');
+
 
 Auth::routes();
 

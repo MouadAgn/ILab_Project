@@ -5,13 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Clinicas</title>
-
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-
-
-
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -175,17 +168,10 @@
 
            
 
-           
-               
+            
 
 
     </style>
-
-    <script>
-
-         
-
-   </SCRIPT>
 
 
 </head>
@@ -234,36 +220,17 @@
 
                 <form>
                     <div class="col-xs-3"">
-                      <label for="clinica">Buscar por Nombre o Prescriptor</label>
+                      <label for="clinica">Buscar por Nombre </label>
                       <input type="text" class="form-control" id="clinica_input" aria-describedby="clinica" placeholder="" size="10">
                       
                     </div>
                     <button class="search_button"><span class="glyphicon glyphicon-search"></span></button> 
 
-                    
-                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#agregar_clinica" style="float:right; margin-top: 15px;"><i class="fa fa-plus"></i> &nbsp; Agregar Clinica</button>
-
-
-                    
-
-                    
-                </form>
+                    <button class="btn btn-success" style="float:right; margin-top: 15px;"><i class="fa fa-plus"></i> &nbsp; Agregar Plantilla</button>
+                    </form>
                     <br><br>
                     <hr class="h_line">
-                    <br>
-                    
-                    <label>Mostrar</label>
-
-                    <button type="button" class="btn btn-light" style="float:right; margin-top: 15px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16">
-                            <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
-                            <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/>
-                          </svg>&nbsp; Imprimir</button>
-                    <button type="button" class="btn btn-light" style="float:right; margin-top: 15px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-excel" viewBox="0 0 16 16">
-                        <path d="M5.884 6.68a.5.5 0 1 0-.768.64L7.349 10l-2.233 2.68a.5.5 0 0 0 .768.64L8 10.781l2.116 2.54a.5.5 0 0 0 .768-.641L8.651 10l2.233-2.68a.5.5 0 0 0-.768-.64L8 9.219l-2.116-2.54z"/>
-                        <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
-                      </svg> &nbsp;Exportar</button>
-                      
+                   
 
                       <div class="row" style="margin-top : 70px;">
                         <div class="col-12">

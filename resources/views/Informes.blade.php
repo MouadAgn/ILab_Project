@@ -141,6 +141,13 @@
                 color: black;
             }   
 
+            .op_list{
+                margin-top: 25px;
+                float: right;
+                background-color: white;
+                margin-left: 200px;
+            }
+
 
     </style>
 
@@ -172,10 +179,10 @@
         <a href="{{ url('/Clinicas') }}" class="nav_items">Clinicas</a></div>
         <div class="item">
         <span class="glyphicon glyphicon-list-alt"></span>
-        <a href="#" class="nav_items">Plantillas</a></div> 
+        <a href="{{ url('/Plantillas') }}" class="nav_items">Plantillas</a></div> 
         <div class="item">
         <span class="glyphicon glyphicon-customer"></span>
-        <a href="#" class="nav_items">Clientes</a></div>
+        <a href="{{ url('/Cliente') }}" class="nav_items">Clientes</a></div>
         <div class="item">
         <span class="glyphicon glyphicon-user"></span>
         <a href="#" class="nav_items">Usuarios</a></div>    
@@ -189,11 +196,30 @@
         <form method="POST">
 
         
+            <div class="container">
 
-            <form class="example" action="" style="margin-left:50px;max-width:300px">
-                <input type="text" placeholder="Buscar.." name="search2">
-                <button type="submit"><span class="glyphicon glyphicon-search" id="search_icon"></span></button>
-              </form>
+                <div class="row">
+                    <div class="col">
+                        <div class="col-xs-3"">
+                        <label for="clinica">Buscar por Nombre </label>
+                        <input type="text" class="form-control" id="clinica_input" aria-describedby="clinica" placeholder="" size="10">
+                    </div>
+                    <div class="col">
+                        <div class="col-xs-3"">
+                        <label for="clinica">Buscar por Nombre </label>
+                        <input type="text" class="form-control" id="clinica_input" aria-describedby="clinica" placeholder="" size="10">
+                    </div>
+                    <div class="col">
+                        <div class="col-xs-3"">
+                        <label for="clinica">Buscar por Nombre </label>
+                        <input type="text" class="form-control" id="clinica_input" aria-describedby="clinica" placeholder="" size="10">
+                    </div>
+                  </div>
+
+            </div>    
+
+
+           
                 
         
 
