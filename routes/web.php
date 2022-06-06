@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 //   return view('welcome');
 //});
 
- Route::view('/','welcome')->name('home');
+ Route::view('/','welcome')->name('welcome');
 
  /*Route::match(['get','post'], '/user/profile', function()
  {
@@ -90,7 +90,11 @@ Route::group (['prefix' => 'etudiant','as'=>'etudiant.'], function() {
     Route::view('notes', 'Students.notes')->name('notes');
 });
 
-Route::view('/Results','TestTable');
+Route::view('/Informes','Informes');
+
+Route::view('/Clinicas','Clinicas');
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

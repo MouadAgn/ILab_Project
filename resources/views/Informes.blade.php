@@ -16,10 +16,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     
    
 
     <style>
+        body{
+            background-color:aliceblue;
+        }
                        td, th {
                 vertical-align: middle !important;
                 }
@@ -121,35 +128,18 @@
                 }
                
 
-                form.example input[type=text] {
-            padding: 10px;
-            font-size: 17px;
-            border: 1px solid grey;
-            float: left;
-            width: 80%;
-            background: #f1f1f1;
-            }
-
-            form.example button {
-            float: left;
-            width: 20%;
-            height:5%;
-            padding: 10px;
-            background: #2196F3;
-            color: white;
-            font-size: 17px;
-            border: 1px solid grey;
-            border-left: none;
-            cursor: pointer;
-            }
-
-            form.example button:hover {
-            background: #0b7dda;
-            }
-
          
+            .nav_items
+            {
+                color: white;
 
-                    
+            }
+
+            .nav_items:hover
+            {
+                text-decoration: none;
+                color: black;
+            }   
 
 
     </style>
@@ -172,39 +162,42 @@
         <span class="glyphicon glyphicon-th-large"></span>
         </div>
         <div class="item active">
+        <span class="glyphicon glyphicon-home"></span>
+        <a href="{{ Route('welcome')}}" class="nav_items">Home</a></div>
+        <div class="item">
         <span class="glyphicon glyphicon-th-list"></span>
-            Test</div>
+        <a href="{{ url('/Informes') }}" class="nav_items">Informes</a></div>
         <div class="item">
-        <span class="glyphicon glyphicon-log-out"></span>
-        Test</div>
+        <span class="glyphicon glyphicon-briefcase"></span>
+        <a href="{{ url('/Clinicas') }}" class="nav_items">Clinicas</a></div>
         <div class="item">
-        <span class="glyphicon glyphicon-log-in"></span>
-        Test</div> 
+        <span class="glyphicon glyphicon-list-alt"></span>
+        <a href="#" class="nav_items">Plantillas</a></div> 
         <div class="item">
-        <span class="glyphicon glyphicon-random"></span>
-        Test</div>
+        <span class="glyphicon glyphicon-customer"></span>
+        <a href="#" class="nav_items">Clientes</a></div>
         <div class="item">
-        <span class="glyphicon glyphicon-remove"></span>
-        Test</div>    
+        <span class="glyphicon glyphicon-user"></span>
+        <a href="#" class="nav_items">Usuarios</a></div>    
         </div>
         
     </div>
 
     
-    <section class="test">
+    <section class="op_list">
 
-        <fieldset>
+        <form method="POST">
+
         
-           
-                
-                
+
             <form class="example" action="" style="margin-left:50px;max-width:300px">
                 <input type="text" placeholder="Buscar.." name="search2">
-                <button type="submit"><i class="fa fa-search"></i></button>
+                <button type="submit"><span class="glyphicon glyphicon-search" id="search_icon"></span></button>
               </form>
                 
-            
-        </fieldset>
+        
+
+    </form>
         
 
     </section>
@@ -479,9 +472,6 @@
             </div>
         </div>
     </div><br><br> 
-
-
-
 
 
 
