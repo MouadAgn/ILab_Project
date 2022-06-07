@@ -24,7 +24,7 @@
    
 
     <style>
-        body{
+      body{
             background-color:aliceblue;
         }
                        td, th {
@@ -42,6 +42,7 @@
                     width: 50px;
                     transition: width 1s ;
                     position: fixed;
+                    
                 }
 
             .right {
@@ -141,8 +142,6 @@
                 color: black;
             }   
 
-
-         
             .clinicas
             {
                 background-color: white;
@@ -162,22 +161,34 @@
                 
             }
 
-            .hr_line{
-                border: 5px solid red;
-            }
-
-           
             .title
             {
                 background-color: white;
-                margin-top: 100px;
+                margin-top:10px;
                 height: 130px;
                 width: 100%;
                 float: right; 
             }
+
+
+            .login_div
+            {
+                background-color: white;
+                height: 70px;
+                width: 100%;
+                float: right; 
+            }
+
+            .login_infos
+            {
+                float: right;
+            }   
             
-
-
+            .section-title-hr {
+            width: 100%;
+            border: 0.5px solid black;
+            background-color: black;   
+            }
     </style>
 
 
@@ -219,6 +230,28 @@
         
     </div>
 
+
+    <section class="login_div">
+        <h5></h5>
+        <div class="login_infos">
+            <p style="color: red; margin-right: 20px; margin-bottom: 5px;">Hola Mouad!</p>
+        </div>
+        <div class="links" style="margin-right: -80px; float: right; margin-top: 24px; padding: 6px 0px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+              </svg>
+            <a href="" style="color:black; font-size: 12px;">Mi Cuenta</a>&nbsp;&nbsp;
+            <div class="vr" style="margin-top: 2px;"></div>&nbsp;&nbsp;
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+            <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/></svg>
+            <a href="" style="color:black; font-size: 12px;">Log Out</a> 
+        </div>
+       
+    </section>
+
+
+
     <section class="title">
         <h1 style="margin-left: 100px; margin-top: 40px;">Plantillas</h1>
     </section>
@@ -229,17 +262,24 @@
             <div class="container">
 
                 <form>
-                    <div class="col-xs-3"">
+                    <div class="col-xs-4"">
                       <label for="clinica">Buscar por Nombre </label>
-                      <input type="text" class="form-control" id="clinica_input" aria-describedby="clinica" placeholder="" size="10">
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Buscar..">
+                        <div class="input-group-btn">
+                          <button class="btn btn-default" type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                          </button>
+                        </div>
+                      </div>
                       
                     </div>
-                    <button class="search_button"><span class="glyphicon glyphicon-search"></span></button> 
+                    
 
                     <button class="btn btn-success" style="float:right; margin-top: 15px;"><i class="fa fa-plus"></i> &nbsp; Agregar Plantilla</button>
                     </form>
-                    <br><br>
-                    <hr class="h_line">
+                    <br><br><br><br><br>
+                    <hr class="section-title-hr"> 
                    
 
                       <div class="row" style="margin-top : 70px;">

@@ -188,6 +188,12 @@
                 float: right;
             }
 
+
+            .section-title-hr {
+            width: 100%;
+            border: 0.5px solid black;
+            background-color: black;    
+}
     </style>
 
 
@@ -263,55 +269,154 @@
         <div class="container">
 
             <form>
-
+                
                 <div class="row">
-                    <div class="col-sm">
-                        <div class="col-xs-3"">
-                            <label for="clinica">Buscar por Nombre </label>
-                            <input type="text" class="form-control" id="clinica_input" aria-describedby="clinica" placeholder="" size="10">
+                    <div class="col-md-3">
+                        
+                            <label for="clinica">Buscar por nombre cliente/prescriptor </label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Buscar..">
+                                <div class="input-group-btn">
+                                  <button class="btn btn-default" type="submit">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                  </button>
+                                </div>
+                              </div>
+                    </div>
+                    <div class="col-md-3">
+                        
+                        <label for="clinica">Buscar por nro.muestra </label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Buscar..">
+                            <div class="input-group-btn">
+                              <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                              </button>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-md-3">
+                        
+                            <label for="clinica">Buscar por fecha de envio</label>
+                            <div class="input-group">
+                                <input type="date" class="form-control">
+                                <input type="date" class="form-control">
+                            </div>  
+                    </div>
+
+                    <div class="col-md-3">
+                        
+                        <div class="d-flex" style="height: 300px;">
+                            <div class="vr"></div>
+                          </div>
+
+                            <button class="btn btn-success" id="agregar_cliente" style="float:right; margin-right: -10px; margin-top: -280px; width:250px;"><i class="fa fa-plus"></i> &nbsp; Nuevo Informe</button>
+                            <button class="btn btn-success" id="agregar_cliente" style="float:right; margin-right: -10px; margin-top: -230px;  width:250px;"><i class="fa fa-file-excel-o" aria-hidden="true"></i> &nbsp; Importar Excel</button>
+                            <button class="btn btn-success" id="agregar_cliente" style="float:right; margin-right: -10px; margin-top: -180px;  width:250px;"><i class="fa fa-plus"></i> &nbsp; Cargar con codigo de reserva</button>
+                            
                             
                     </div>
-                    
-                    <div class="col-sm">
-                        <div class="col-xs-3"">
-                            <label for="clinica">Buscar por Nombre </label>
-                            <input type="text" class="form-control" id="clinica_input" aria-describedby="clinica" placeholder="" size="10">
-                            
-                        </div>
+
+                </div>
+
+
+
+
+                
+
+
+                <div class="row" style="margin-top: -170px;">
+                    <div class="col-md-3">
                         
-                 
-                  </div>
+                            <label for="clinica">Enviados/Sin Enviar</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Buscar..">
+                                <div class="input-group-btn">
+                                  <button class="btn btn-default" type="submit">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                  </button>
+                                </div>
+                              </div>
+                    </div>
+                    <div class="col-md-3">
+                        
+                        <label for="clinica">Buscar por nro.muestra </label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Buscar..">
+                            <div class="input-group-btn">
+                              <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                              </button>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-md-3">
+                        
+                            <label for="clinica">Buscar por fecha de envio</label>
+                            <div class="input-group">
+                                <input type="date" class="form-control">
+                            </div>  
+                    </div>
+                </div>
 
+
+
+                <div class="row" style="margin-top: 50px;">
+                    <div class="col-md-3">
+                        
+                            <label for="clinica">Enviados/Sin Enviar</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Buscar..">
+                                <div class="input-group-btn">
+                                  <button class="btn btn-default" type="submit">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                  </button>
+                                </div>
+                              </div>
+                    </div>
+                    <div class="col-md-3">
+                        
+                        <label for="clinica">Buscar por nro.muestra </label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Buscar..">
+                            <div class="input-group-btn">
+                              <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                              </button>
+                            </div>
+                          </div>
+                    </div>
+                    
+                </div>
+                
                
 
-               
+            </form><br>
+            <hr class="section-title-hr">
 
-                
-                <button class="btn btn-success" id="agregar_cliente" style="float:right; margin-top: 15px;"><i class="fa fa-plus"></i> &nbsp; Agregar Cliente</button>
-                
+            <label style="margin-top: -20px;">Mostrar</label>
 
+            <button type="button" class="btn btn-light" style="float:right; margin-top: -3px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16">
+                    <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+                    <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/>
+                  </svg>&nbsp; Imprimir</button>
+            <button type="button" class="btn btn-light" style="float:right; margin-top: -3px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-excel" viewBox="0 0 16 16">
+                <path d="M5.884 6.68a.5.5 0 1 0-.768.64L7.349 10l-2.233 2.68a.5.5 0 0 0 .768.64L8 10.781l2.116 2.54a.5.5 0 0 0 .768-.641L8.651 10l2.233-2.68a.5.5 0 0 0-.768-.64L8 9.219l-2.116-2.54z"/>
+                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+              </svg> &nbsp;Exportar</button>
               
+            
+            <hr class="section-title-hr"> 
 
-                
-            </form>
-                <br><br>
-                <hr class="h_line">
-                <br>
-                <br><br>
-                <label>Mostrar</label>
 
-                <button type="button" class="btn btn-light" style="float:right; margin-top: 15px;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16">
-                        <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
-                        <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/>
-                      </svg>&nbsp; Imprimir</button>
-                <button type="button" class="btn btn-light" style="float:right; margin-top: 15px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-excel" viewBox="0 0 16 16">
-                    <path d="M5.884 6.68a.5.5 0 1 0-.768.64L7.349 10l-2.233 2.68a.5.5 0 0 0 .768.64L8 10.781l2.116 2.54a.5.5 0 0 0 .768-.641L8.651 10l2.233-2.68a.5.5 0 0 0-.768-.64L8 9.219l-2.116-2.54z"/>
-                    <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
-                  </svg> &nbsp;Exportar</button>
+            <br><br><BR><BR><BR><BR><BR>
+            <br>
+            
+            
                   
 
-                  <div class="row" style="margin-top : 70px;">
+                  <div class="row" style="margin-top : -130px; padding-bottom: 20px;">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body text-center">
@@ -578,7 +683,7 @@
 
 
 </section>
-    </div><br><br> 
+    </div><br><br><br>
 
 
 
