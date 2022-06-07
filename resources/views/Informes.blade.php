@@ -310,8 +310,8 @@
                             <div class="vr"></div>
                           </div>
 
-                            <button class="btn btn-success" id="agregar_cliente" style="float:right; margin-right: -10px; margin-top: -280px; width:250px;"><i class="fa fa-plus"></i> &nbsp; Nuevo Informe</button>
-                            <button class="btn btn-success" id="agregar_cliente" style="float:right; margin-right: -10px; margin-top: -230px;  width:250px;"><i class="fa fa-file-excel-o" aria-hidden="true"></i> &nbsp; Importar Excel</button>
+                            <button class="btn btn-success" id="agregar_cliente" style="float:right; margin-right: -10px; margin-top: -280px;  width:250px;"><i class="fa fa-plus"></i><a style="text-decoration: none; color: white;" href="{{url('/Informes/NuevoInforme')}}"> &nbsp;Nuevo Informe</button></a>
+                            <button class="btn btn-success" id="agregar_cliente" style="float:right; margin-right: -10px; margin-top: -230px;  width:250px;"><i class="fa fa-file-excel-o" aria-hidden="true"></i> &nbsp;<a style="text-decoration: none; color:white;" href="{{ url('Informes/NuevoInforme') }}">Importar Excel  </a></button>
                             <button class="btn btn-success" id="agregar_cliente" style="float:right; margin-right: -10px; margin-top: -180px;  width:250px;"><i class="fa fa-plus"></i> &nbsp; Cargar con codigo de reserva</button>
                             
                             
@@ -330,7 +330,27 @@
                         
                             <label for="clinica">Enviados/Sin Enviar</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Buscar..">
+                                <select class="selectpicker" style="height:33px; width:250px;"> 
+                                    <option value="">-Seleccionar Prescriptor--</option>
+                                    <option value="17" >Clinica Garriga</option>
+                                    <option value="16" >CLINICA CORNELI</option>
+                                    <option value="15" >CLINICA NEXUM</option>
+                                    <option value="14" >STETIC MEDIC</option>
+                                    <option value="13" >PCR Europa</option>
+                                    <option value="12" >PCR Facil</option>
+                                    <option value="11" >Clinica Orzaes</option>
+                                    <option value="9" >Laboratorio Carlos Ferrero </option>
+                                    <option value="8" >Clinica Gesrivas </option>
+                                    <option value="7" >Malaga</option>
+                                    <option value="6" >Barcelona</option>
+                                    <option value="5" >Clinica Bruselas</option>
+                                    <option value="1" selected>Medsolutions</option>
+                                    <option value="2" >PCR Facil Prueba</option>
+                                    <option value="3" >Ibiza</option>
+                                    <option value="10" >Clinica Love Barcelona</option>
+                                    <option value="4" >Hidalgo Contioso, SL</option>
+        
+                                </select>
                                 <div class="input-group-btn">
                                   <button class="btn btn-default" type="submit">
                                     <i class="glyphicon glyphicon-search"></i>
@@ -352,7 +372,7 @@
                     </div>
                     <div class="col-md-3">
                         
-                            <label for="clinica">Buscar por fecha de envio</label>
+                            <label for="clinica">Nro de Autorización</label>
                             <div class="input-group">
                                 <input type="date" class="form-control">
                             </div>  

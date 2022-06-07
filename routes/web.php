@@ -98,6 +98,13 @@ Route::view('/Plantillas','Plantillas');
 
 Route::view('/Cliente','Cliente');
 
+Route::view('/Informes/NuevoInforme','AgregarInforme')->name('NuevoInfome');
+
+Route::view('/Clinicas/NuevaClinica','Agregar_Clinica')->name('NuevaClinica');
+
+Route::view('/Plantillas/NuevaPlantilla','AgregarPlantilla')->name('NuevaPlantilla');
+
+Route::view('/Cliente/NuevoCliente','Agregar_Cliente')->name('NuevoCliente');
 
 Auth::routes();
 
