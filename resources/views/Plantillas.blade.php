@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Clinicas</title>
+    <title>ILAB - PLANTILLAS</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -276,277 +276,86 @@
                     </div>
                     
 
-                    <button class="btn btn-success" style="float:right; margin-top: 15px;"><i class="fa fa-plus"></i> &nbsp; Agregar Plantilla</button>
+                    <button class="btn btn-success" style="float:right; margin-top: 15px;"><i class="fa fa-plus"></i><a style="text-decoration: none; color: white;" href="{{url('/Plantillas/NuevaPlantilla')}}"> &nbsp; Agregar Plantilla</a></button>
                     </form>
                     <br><br><br><br><br>
                     <hr class="section-title-hr"> 
                    
+            </div> 
+                   
+            
+            <br><br><br>
 
-                      <div class="row" style="margin-top : 70px;">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <h5 class="card-title m-b-0">PCR Results</h5>
-                                </div>
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead class="thead-light">
-                                                <tr>
-                                                    <th>
-                                                        <label class="customcheckbox m-b-20">
-                                                            <input type="checkbox" id="mainCheckbox">
-                                                            <span class="checkmark"></span>
-                                                        </label>
-                                                    </th>
-                                                    <th scope="col">ID</th>
-                                                    <th scope="col">Cliente</th>
-                                                    <th scope="col">DNI</th>
-                                                    <th scope="col">Telefono</th>
-                                                    <th scope="col">Motivo</th>
-                                                    <th scope="col">Pres</th>
-                                                    <th scope="col">Plantilla</th>
-                                                    <th scope="col">NR.Muestra</th>
-                                                    <th scope="col">Pin</th>
-                                                    <th scope="col">N.Autorizacion</th>
-                                                    <th scope="col">Email</th>
-                                                    <th scope="col">Email</th>
-                                                    <th scope="col">Email</th>
-                                                    <th scope="col">Email</th>
-                                                    <th scope="col">Email</th>
-                                                    <th scope="col">Email</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="customtable">
-                                                <tr>
-                                                    <th>
-                                                        <label class="customcheckbox">
-                                                            <input type="checkbox" class="listCheckbox">
-                                                            <span class="checkmark"></span>
-                                                        </label>
-                                                    </th>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>
-                                                        <label class="customcheckbox">
-                                                            <input type="checkbox" class="listCheckbox">
-                                                            <span class="checkmark"></span>
-                                                        </label>
-                                                    </th>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>
-                                                        <label class="customcheckbox">
-                                                            <input type="checkbox" class="listCheckbox">
-                                                            <span class="checkmark"></span>
-                                                        </label>
-                                                    </th>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>
-                                                        <label class="customcheckbox">
-                                                            <input type="checkbox" class="listCheckbox">
-                                                            <span class="checkmark"></span>
-                                                        </label>
-                                                    </th>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>
-                                                        <label class="customcheckbox">
-                                                            <input type="checkbox" class="listCheckbox">
-                                                            <span class="checkmark"></span>
-                                                        </label>
-                                                    </th>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>
-                                                        <label class="customcheckbox">
-                                                            <input type="checkbox" class="listCheckbox">
-                                                            <span class="checkmark"></span>
-                                                        </label>
-                                                    </th>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                </tr>
-                
-                                                <tr>
-                                                    <th>
-                                                        <label class="customcheckbox">
-                                                            <input type="checkbox" class="listCheckbox">
-                                                            <span class="checkmark"></span>
-                                                        </label>
-                                                    </th>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                </tr>
-                
-                                                <tr>
-                                                    <th>
-                                                        <label class="customcheckbox">
-                                                            <input type="checkbox" class="listCheckbox">
-                                                            <span class="checkmark"></span>
-                                                        </label>
-                                                    </th>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                </tr>
-                
-                                                <tr>
-                                                    <th>
-                                                        <label class="customcheckbox">
-                                                            <input type="checkbox" class="listCheckbox">
-                                                            <span class="checkmark"></span>
-                                                        </label>
-                                                    </th>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                </tr>
-                
-                                               
-                
-                                                
-                                            </tbody>
-                                        </table>
-                                    </div>
-                            </div>
 
-            </div>
+            <div class="row" style=" padding-bottom: 20px; margin-right: 20px;">
+                        
+                <div class="col-18">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Nombre para Prescriptor</th>
+                        <th scope="col"">Prescriptor/es</th>
+                        <th scope="col">Archivo</th>
+                        <th scope="col">Envia por Horas</th>
+                        <th scope="col">Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">LAMP Negativo</th>
+                        <td></td>
+                        <td>MedSolutions</td>
+                        <td></td>
+                        <td><center><div style="background-color: red; color: white; width:30px; height:30px; padding: 5px 4px; border-radius: 8px;">No</div></center></td>
+                        <td>
+                          <button  style="font-size: 8px;" type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete!" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                            <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                          </svg></button>
+                          <button style="font-size: 11px;" type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Edit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                            <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+                          </svg>&nbsp;&nbsp;Edit plantilla</button><br>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">LAMP Negativo</th>
+                        <td></td>
+                        <td>MedSolutions</td>
+                        <td></td>
+                        <td><center><div style="background-color: red; color: white; width:30px; height:30px; padding: 5px 4px; border-radius: 8px;">No</div></center></td>
+                        <td>
+                          <button  style="font-size: 8px;" type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete!" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                            <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                          </svg></button>
+                          <button style="font-size: 11px;" type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Edit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                            <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+                          </svg>&nbsp;&nbsp;Edit plantilla</button><br>
+                        </td>
+                    </tr>
 
+                    <tr>
+                        <th scope="row">LAMP Negativo</th>
+                        <td></td>
+                        <td>MedSolutions</td>
+                        <td></td>
+                        <td><center><div style="background-color: red; color: white; width:30px; height:30px; padding: 5px 4px; border-radius: 8px;">No</div></center></td>
+                        <td>
+                          <button  style="font-size: 8px;" type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete!" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                            <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                          </svg></button>
+                          <button style="font-size: 11px;" type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Edit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                            <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+                          </svg>&nbsp;&nbsp;Edit plantilla</button><br>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+          </div>
 
     </section>
     
