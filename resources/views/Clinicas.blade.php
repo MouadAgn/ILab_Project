@@ -202,11 +202,12 @@
 
     </style>
 
-    <script>
+<script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();   
+    });
 
-         
-
-   </SCRIPT>
+</script>
 
 
 </head>
@@ -221,7 +222,7 @@
 
 <!-- Navigation -->
 
-    <div class="left">
+<div class="left">
         <div class="item">
         <span class="glyphicon glyphicon-th-large"></span>
         </div>
@@ -238,7 +239,7 @@
         <span class="glyphicon glyphicon-list-alt"></span>
         <a href="{{ url('/Plantillas') }}" class="nav_items">Plantillas</a></div> 
         <div class="item">
-        <span class="glyphicon glyphicon-customer"></span>
+        <span class="glyphicon glyphicon-king"></span>
         <a href="{{ url('/Cliente') }}" class="nav_items">Clientes</a></div>
         <div class="item">
         <span class="glyphicon glyphicon-user"></span>
@@ -294,7 +295,7 @@
                     
 
                     
-                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#agregar_clinica" style="float:right; margin-top: 15px;"><i class="fa fa-plus"></i> &nbsp; Agregar Clinica</button>
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#agregar_clinica" style="float:right; margin-top: 15px;"> <a style="text-decoration: none; color: white;" href="{{url('/Clinicas/NuevaClinica')}}"><i class="fa fa-plus"></i>&nbsp;&nbsp;Agregar Clinica</button>
 
 
                     
@@ -305,284 +306,112 @@
                    
                 <br>
                 <br><br>
-                <label style="margin-top: 30px;">Mostrar</label>
+                <hr class="section-title-hr"> 
+                <label style="margin-top: -20px;">Mostrar</label>
 
-                <button type="button" class="btn btn-light" style="float:right; margin-top: 15px;">
+                <button type="button" class="btn btn-light" style="float:right; margin-top: -3px;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16">
                         <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
                         <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/>
                       </svg>&nbsp; Imprimir</button>
-                <button type="button" class="btn btn-light" style="float:right; margin-top: 15px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-excel" viewBox="0 0 16 16">
+                <button type="button" class="btn btn-light" style="float:right; margin-top: -3px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-excel" viewBox="0 0 16 16">
                     <path d="M5.884 6.68a.5.5 0 1 0-.768.64L7.349 10l-2.233 2.68a.5.5 0 0 0 .768.64L8 10.781l2.116 2.54a.5.5 0 0 0 .768-.641L8.651 10l2.233-2.68a.5.5 0 0 0-.768-.64L8 9.219l-2.116-2.54z"/>
                     <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
-                  </svg> &nbsp;Exportar</button><br><br>
-                  <hr class="section-title-hr"> 
-                      
-
-                      <div class="row" style="margin-top : 70px;">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <h5 class="card-title m-b-0">PCR Results</h5>
-                                </div>
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead class="thead-light">
-                                                <tr>
-                                                    <th>
-                                                        <label class="customcheckbox m-b-20">
-                                                            <input type="checkbox" id="mainCheckbox">
-                                                            <span class="checkmark"></span>
-                                                        </label>
-                                                    </th>
-                                                    <th scope="col">ID</th>
-                                                    <th scope="col">Cliente</th>
-                                                    <th scope="col">DNI</th>
-                                                    <th scope="col">Telefono</th>
-                                                    <th scope="col">Motivo</th>
-                                                    <th scope="col">Pres</th>
-                                                    <th scope="col">Plantilla</th>
-                                                    <th scope="col">NR.Muestra</th>
-                                                    <th scope="col">Pin</th>
-                                                    <th scope="col">N.Autorizacion</th>
-                                                    <th scope="col">Email</th>
-                                                    <th scope="col">Email</th>
-                                                    <th scope="col">Email</th>
-                                                    <th scope="col">Email</th>
-                                                    <th scope="col">Email</th>
-                                                    <th scope="col">Email</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="customtable">
-                                                <tr>
-                                                    <th>
-                                                        <label class="customcheckbox">
-                                                            <input type="checkbox" class="listCheckbox">
-                                                            <span class="checkmark"></span>
-                                                        </label>
-                                                    </th>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>
-                                                        <label class="customcheckbox">
-                                                            <input type="checkbox" class="listCheckbox">
-                                                            <span class="checkmark"></span>
-                                                        </label>
-                                                    </th>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>
-                                                        <label class="customcheckbox">
-                                                            <input type="checkbox" class="listCheckbox">
-                                                            <span class="checkmark"></span>
-                                                        </label>
-                                                    </th>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>
-                                                        <label class="customcheckbox">
-                                                            <input type="checkbox" class="listCheckbox">
-                                                            <span class="checkmark"></span>
-                                                        </label>
-                                                    </th>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>
-                                                        <label class="customcheckbox">
-                                                            <input type="checkbox" class="listCheckbox">
-                                                            <span class="checkmark"></span>
-                                                        </label>
-                                                    </th>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>
-                                                        <label class="customcheckbox">
-                                                            <input type="checkbox" class="listCheckbox">
-                                                            <span class="checkmark"></span>
-                                                        </label>
-                                                    </th>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                </tr>
+                  </svg> &nbsp;Exportar</button>
+                  
                 
-                                                <tr>
-                                                    <th>
-                                                        <label class="customcheckbox">
-                                                            <input type="checkbox" class="listCheckbox">
-                                                            <span class="checkmark"></span>
-                                                        </label>
-                                                    </th>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                </tr>
+                <hr class="section-title-hr"> 
+    
+    
+                <br><br><BR><BR><BR><BR><BR>
+                <br>
                 
-                                                <tr>
-                                                    <th>
-                                                        <label class="customcheckbox">
-                                                            <input type="checkbox" class="listCheckbox">
-                                                            <span class="checkmark"></span>
-                                                        </label>
-                                                    </th>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                </tr>
-                
-                                                <tr>
-                                                    <th>
-                                                        <label class="customcheckbox">
-                                                            <input type="checkbox" class="listCheckbox">
-                                                            <span class="checkmark"></span>
-                                                        </label>
-                                                    </th>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                    <td>Test</td>
-                                                </tr>
-                
-                                               
-                
-                                                
-                                            </tbody>
-                                        </table>
-                                    </div>
-                            </div>
-
             </div>
+                      
+    
+                      <div class="row" style="margin-top : -130px; padding-bottom: 20px; margin-right: 30px;">
+                        
+                            <div class="col-18">
+                              <table class="table table-bordered">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">NIF</th>
+                                    <th scope="col">Prescriptor</th>
+                                    <th scope="col">Direccion</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Tel</th>
+                                    <th scope="col">Activo</th>
+                                    <th scope="col">Verifica Codigo</th>
+                                    <th scope="col">Acciones</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">Clinica Garriga</th>
+                                    <td></td>
+                                    <td>Dr. Daniel Sergio Rand (Nro.<BR> Colegiado Brc282851000)</td>
+                                    <td>Carrer de Joan Gamper,<BR> 16, 08014 Barcelona</td>
+                                    <td>info@clinicagarriga.com</td>
+                                    <td style="color: red;">[no<BR> cargado]</td>
+                                    <td><div style="background-color: red; color: white; width:46px; height:30px; padding: 5px 4px; border-radius: 8px;">activo</div></td>
+                                    <td><center><div style="background-color: red; color: white; width:30px; height:30px; padding: 5px 4px; border-radius: 8px;">No</div></center></td>
+                                    <td>
+                                      <button  style="font-size: 8px;" type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete!" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                                      </svg></button>
+                                      <button style="font-size: 11px;" type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Edit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                                        <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+                                      </svg>&nbsp;&nbsp;Edit presprictor</button><br>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <th scope="row">Clinica Garriga</th>
+                                    <td></td>
+                                    <td>Dr. Daniel Sergio Rand (Nro.<BR> Colegiado Brc282851000)</td>
+                                    <td>Carrer de Joan Gamper,<BR> 16, 08014 Barcelona</td>
+                                    <td>info@clinicagarriga.com</td>
+                                    <td style="color: red;">[no<BR> cargado]</td>
+                                    <td><div style="background-color: red; color: white; width:46px; height:30px; padding: 5px 4px; border-radius: 8px;">activo</div></td>
+                                    <td><center><div style="background-color: red; color: white; width:30px; height:30px; padding: 5px 4px; border-radius: 8px;">No</div></center></td>
+                                    <td>
+                                      <button  style="font-size: 12px;" type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete!" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                                      </svg></button>
+                                      <button style="font-size: 11px;" type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Edit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                                        <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+                                      </svg>&nbsp;&nbsp;Edit presprictor</button><br>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">Clinica Garriga</th>
+                                    <td></td>
+                                    <td>Dr. Daniel Sergio Rand (Nro.<BR> Colegiado Brc282851000)</td>
+                                    <td>Carrer de Joan Gamper,<BR> 16, 08014 Barcelona</td>
+                                    <td>info@clinicagarriga.com</td>
+                                    <td style="color: red;">[no<BR> cargado]</td>
+                                    <td><div style="background-color: red; color: white; width:46px; height:30px; padding: 5px 4px; border-radius: 8px;">activo</div></td>
+                                    <td><center><div style="background-color: red; color: white; width:30px; height:30px; padding: 5px 4px; border-radius: 8px;">No</div></center></td>
+                                    <td>
+                                      <button  style="font-size: 12px;" type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete!" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                                      </svg></button>
+                                      <button style="font-size: 11px;" type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Edit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                                        <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+                                      </svg>&nbsp;&nbsp;Edit presprictor</button><br>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                      </div>
+                    
+                                  
 
 
     </section>

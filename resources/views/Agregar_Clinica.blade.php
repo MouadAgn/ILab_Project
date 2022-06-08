@@ -213,31 +213,31 @@
 
 <!-- Navigation -->
 
-    <div class="left">
-        <div class="item">
-        <span class="glyphicon glyphicon-th-large"></span>
-        </div>
-        <div class="item active">
-        <span class="glyphicon glyphicon-home"></span>
-        <a href="{{ Route('welcome')}}" class="nav_items">Home</a></div>
-        <div class="item">
-        <span class="glyphicon glyphicon-th-list"></span>
-        <a href="{{ url('/Informes') }}" class="nav_items">Informes</a></div>
-        <div class="item">
-        <span class="glyphicon glyphicon-briefcase"></span>
-        <a href="{{ url('/Clinicas') }}" class="nav_items">Clinicas</a></div>
-        <div class="item">
-        <span class="glyphicon glyphicon-list-alt"></span>
-        <a href="{{ url('/Plantillas') }}" class="nav_items">Plantillas</a></div> 
-        <div class="item">
-        <span class="glyphicon glyphicon-customer"></span>
-        <a href="{{ url('/Cliente') }}" class="nav_items">Clientes</a></div>
-        <div class="item">
-        <span class="glyphicon glyphicon-user"></span>
-        <a href="#" class="nav_items">Usuarios</a></div>    
-        </div>
-        
+<div class="left">
+    <div class="item">
+    <span class="glyphicon glyphicon-th-large"></span>
     </div>
+    <div class="item active">
+    <span class="glyphicon glyphicon-home"></span>
+    <a href="{{ Route('welcome')}}" class="nav_items">Home</a></div>
+    <div class="item">
+    <span class="glyphicon glyphicon-th-list"></span>
+    <a href="{{ url('/Informes') }}" class="nav_items">Informes</a></div>
+    <div class="item">
+    <span class="glyphicon glyphicon-briefcase"></span>
+    <a href="{{ url('/Clinicas') }}" class="nav_items">Clinicas</a></div>
+    <div class="item">
+    <span class="glyphicon glyphicon-list-alt"></span>
+    <a href="{{ url('/Plantillas') }}" class="nav_items">Plantillas</a></div> 
+    <div class="item">
+    <span class="glyphicon glyphicon-king"></span>
+    <a href="{{ url('/Cliente') }}" class="nav_items">Clientes</a></div>
+    <div class="item">
+    <span class="glyphicon glyphicon-user"></span>
+    <a href="#" class="nav_items">Usuarios</a></div>    
+    </div>
+    
+</div>
 
 
     <section class="login_div">
@@ -342,7 +342,7 @@
             <br>
             <button class="btn btn-secondary" id="agregar_cliente" style="margin-top: -5px; width:120px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
                 <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
-              </svg></i> &nbsp; Cancelar</button>
+              </svg></i><a style="text-decoration: none; color: white;" href="{{url('/Clinicas')}}"> &nbsp; Cancelar</button>
 
          
             <button type="button" class="btn btn-success" style="float:right; margin-top: -6px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-down" viewBox="0 0 16 16">
