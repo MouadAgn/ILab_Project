@@ -26,7 +26,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     
    
-
+    
     <style>
         body{
             background-color:aliceblue;
@@ -248,7 +248,7 @@
     <section class="login_div">
         <h5></h5>
         <div class="login_infos">
-            <p style="color: red; margin-right: 20px; margin-bottom: 5px;">Hola Mouad!</p>
+            <p style="color: red; margin-right: 20px; margin-bottom: 5px;">Hola  !</p>
         </div>
         <div class="links" style="margin-right: -80px; float: right; margin-top: 24px; padding: 6px 0px;">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">

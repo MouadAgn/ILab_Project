@@ -1,8 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Validate;
+use App\Models\Clinica;
+use App\Http\Controllers\ClinicasController;
+use App\Http\Controllers\ClinicaController;
 
 /*
+C:\Users\OEL\Pictures\projects\Laravel_Projects\ILab_Project\app\Http\Controllers\ClinicasController.php
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -110,3 +115,9 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+//Clinica
+//Route::get('/Agregar_Clinica',function(){return view('/Agregar_Clinica');});
+Route::get('/Agregar_Clinica',[ClinicaController::class,'addClinica']);
+
+
+Route::get('Clinicas',[ClinicasController::class,'show']);
