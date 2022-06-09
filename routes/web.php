@@ -112,6 +112,10 @@ Route::view('/Plantillas/NuevaPlantilla','AgregarPlantilla')->name('NuevaPlantil
 
 Route::view('/Cliente/NuevoCliente','Agregar_Cliente')->name('NuevoCliente');
 
+Route::view('/Usuarios','Usuarios');
+
+Route::view('/Usuarios/NuevoUsuario','AgregarUsuario')->name('NuevoUsuario  ');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

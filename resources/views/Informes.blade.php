@@ -239,7 +239,7 @@
         <a href="{{ url('/Cliente') }}" class="nav_items">Clientes</a></div>
         <div class="item">
         <span class="glyphicon glyphicon-user"></span>
-        <a href="#" class="nav_items">Usuarios</a></div>    
+        <a href="{{ url('/Usuarios') }}" class="nav_items">Usuarios</a></div>    
         </div>
         
     </div>
@@ -248,7 +248,7 @@
     <section class="login_div">
         <h5></h5>
         <div class="login_infos">
-            <p style="color: red; margin-right: 20px; margin-bottom: 5px;">Hola  !</p>
+            <p style="color: red; margin-right: 20px; margin-bottom: 5px;">Hola !</p>
         </div>
         <div class="links" style="margin-right: -80px; float: right; margin-top: 24px; padding: 6px 0px;">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
@@ -267,6 +267,7 @@
         </div>
        
     </section>
+    
     
     <section class="title">
         <h1 style="margin-left: 100px; margin-top: 40px;">Informes</h1>
