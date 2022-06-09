@@ -269,13 +269,12 @@
         <div class="container">
 
             <form action="/Agregar_Clinica" methode="Post">
-                
                 <div class="row">
                     <div class="col-md-3">
-                        
+
                         <label for="clinica">Nombre</label>
                         <div class="input-group">
-                             <input type="text" name="nombre" class="form-control" placeholder="Buscar..">
+                             <input type="text" name="nombre"class="form-control" placeholder="Buscar..">
                         </div>  
 
                     </div>
@@ -300,7 +299,7 @@
                         
                         <label for="clinica">Dirección</label>
                         <div class="input-group">
-                             <input type="text" name="direccion" class="form-control" placeholder="Buscar..">
+                             <input type="text" name="direccion"  class="form-control" placeholder="Buscar..">
                         </div>  
 
                     </div>
@@ -323,7 +322,7 @@
                         
                         <label for="clinica">NºTelefono</label>
                         <div class="input-group">
-                             <input type="text" name = "tel" class="form-control" placeholder="Buscar..">
+                             <input type="text" name = "tel"  class="form-control" placeholder="Buscar..">
                         </div>  
 
                     </div>
@@ -341,11 +340,12 @@
                 <path fill-rule="evenodd" d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"/>
               </svg>&nbsp;Guardar y Terminar</button>
 
-            <button class="btn btn-secondary" id="agregar_cliente" style="margin-top: -5px; width:120px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+              
+            </form>
+            <a style="text-decoration: none; color: white;" name = "cancel" href="{{url('/Clinicas')}}"><button class="btn btn-secondary" id="agregar_cliente" style="margin-top: -5px; width:120px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
                 <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
-              </svg></i><a style="text-decoration: none; color: white;" href="{{url('/Clinicas')}}"> &nbsp; Cancelar</button>
-
-            </form><br>
+              </svg></i> &nbsp; Cancelar</button></a>
+<br>
 
            
               

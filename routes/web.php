@@ -3,8 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Validate;
 use App\Models\Clinica;
+use App\Models\Plantilla;
 use App\Http\Controllers\ClinicasController;
-use App\Http\Controllers\ClinicaController;
+use App\Http\Controllers\PlantillasController;
 
 /*
 C:\Users\OEL\Pictures\projects\Laravel_Projects\ILab_Project\app\Http\Controllers\ClinicasController.php
@@ -117,7 +118,16 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 //Clinica
 //Route::get('/Agregar_Clinica',function(){return view('/Agregar_Clinica');});
-Route::get('/Agregar_Clinica',[ClinicaController::class,'addClinica']);
-
-
 Route::get('Clinicas',[ClinicasController::class,'show']);
+Route::get('/Agregar_Clinica',[ClinicasController::class,'addClinica']);
+Route::get('/Editar_Clinica/{id}',[ClinicasController::class,'showClinica']);
+Route::get('/Editar_Clinica',[ClinicasController::class,'editClinica']);
+Route::get('delete/{id}',[ClinicasController::class,'deleteClinica']);
+
+//Plantilla
+//Route::view('Agregar_Plantilla','Agregar_Plantilla');
+Route::get('Plantillas',[PlantillasController::class,'show']);
+Route::get('Agregar_Plantilla',[PlantillasController::class,'addPlantilla']);
+Route::get('/EditarPlantilla/{id}',[PlantillasController::class,'showPlantilla']);
+Route::get('/EditarPlantilla',[PlantillasController::class,'editPlantilla']);
+Route::get('delete/{id}',[PlantillasController::class,'deletePlantilla']);

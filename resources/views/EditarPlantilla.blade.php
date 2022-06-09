@@ -4,14 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>ILAB - PLANTILLAS</title>
+    <title>ILAB-Plantilla</title>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"/>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"> </script>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>  
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -24,7 +28,7 @@
    
 
     <style>
-      body{
+        body{
             background-color:aliceblue;
         }
                        td, th {
@@ -182,14 +186,20 @@
             .login_infos
             {
                 float: right;
-            }   
-            
+            }
+
+
             .section-title-hr {
             width: 100%;
             border: 0.5px solid black;
-            background-color: black;   
-            }
+            background-color: black;    
+}
     </style>
+
+
+<script>
+    
+</script>
 
 
 </head>
@@ -200,7 +210,6 @@
 
 
     
-
 
 <!-- Navigation -->
 
@@ -249,84 +258,91 @@
         </div>
        
     </section>
-
-
-
-    <section class="title">
-        <h1 style="margin-left: 100px; margin-top: 40px;">Plantillas</h1>
-    </section>
     
+    <section class="title">
+        <h1 style="margin-left: 100px; margin-top: 40px;">Nueva Plantilla</h1>
+    </section>
+
     <section class="clinicas">
 
 
-            <div class="container">
+        <div class="container">
 
-                <form>
-                    <div class="col-xs-4"">
-                      <label for="clinica">Buscar por Nombre </label>
-                      <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Buscar..">
-                        <div class="input-group-btn">
-                          <button class="btn btn-default" type="submit">
-                            <i class="glyphicon glyphicon-search"></i>
-                          </button>
-                        </div>
-                      </div>
-                      
+            <form action="/EditarPlantilla" methode="Post" enctype="multipart/form-data">
+                @csrf
+                <div class="row">
+                    <div class="col-md-3">
+                        
+                        <label for="clinica">Nombre</label>
+                        <div class="input-group">
+                             <input type="text" class="form-control" name ="nombre" value="{{$data['Nombre']}}" placeholder="Buscar.." style="height:33px; width:250px;">
+                        </div>  
+
+                    </div>
+                    <div class="col-md-3">
+                        
+                        <label for="clinica">Descripcion</label>
+                        <div class="input-group">
+                             <input type="text" class="form-control" name="descripcion" value="{{$data['Descripcion']}}" placeholder="Buscar.." style="height:33px; width:250px;">
+                        </div>  
+
+                    </div>
+
+                    
+                    <div class="col-md-3">
+                        <label for="clinica">Hora Envío Predeterminada</label>
+                        <div class="input-group">
+                             <input type="text" class="form-control" name="hora" value="{{$data['Hora']}}" placeholder="hh:mm">
+                        </div> 
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="clinica">Archivo</label>
+                        <input class="form-control" type="file" name="nombrefichero" value="{{$data['Fichero']}}" id="nombrefichero">
                     </div>
                     
+                </div>
 
-                    <button class="btn btn-success" style="float:right; margin-top: 15px;"><i class="fa fa-plus"></i><a style="text-decoration: none; color: white;" href="{{url('/Plantillas/NuevaPlantilla')}}"> &nbsp; Agregar Plantilla</a></button>
-                    </form>
-                    <br><br><br><br><br>
-                    <hr class="section-title-hr"> 
-                   
-            </div> 
-                   
+                <br>
+               
+                <div class="row">
+                    
+                </div>
+                
+                <br>
+
+                    <div class="col-md-3"></div>
+                </div>
+                <hr class="section-title-hr">
+                <br>
+
+                <button type="submit" class="btn btn-success" style="float:right; margin-top: -6px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M3.5 10a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 0 0 1h2A1.5 1.5 0 0 0 14 9.5v-8A1.5 1.5 0 0 0 12.5 0h-9A1.5 1.5 0 0 0 2 1.5v8A1.5 1.5 0 0 0 3.5 11h2a.5.5 0 0 0 0-1h-2z"/>
+                    <path fill-rule="evenodd" d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"/>
+                  </svg>&nbsp;Guardar y Terminar</button>
+
+            </form><br>
+
+            <a style="text-decoration: none; color: white;" href="{{url('/Plantillas')}}"> <button class="btn btn-secondary" id="agregar_cliente" style="margin-top: -5px; width:120px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+              </svg></i>&nbsp; Cancelar</button></a>
+
+         
+
+              
             
-            <br><br><br>
+            
+</section>
+    </div><br><br><br>
 
 
-            <div class="row" style=" padding-bottom: 20px; margin-right: 20px;">
-                        
-                <div class="col-18">
-                  <table class="table table-bordered">
-                    <thead>
-                      <tr>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Descripcion</th>
-                        <th scope="col">Hora Envio</th>
-                        <th scope="col">Archivo</th>
-                        <th scope="col">Activo</th>
-                        <th scope="col">Acciones</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      @foreach ($plantillas as $plantilla)
-                      <tr>
-                        <th scope="row">{{$plantilla['Nombre']}}</th>
-                        <td>{{$plantilla['Descripcion']}}</td>
-                        <td>{{$plantilla['Hora']}}</td>
-                        <td>{{$plantilla['NombreFichero']}}</td>
-                        <td><center><div style="background-color: rgb(0, 174, 255); color: white; width:30px; height:30px; padding: 5px 4px; border-radius: 8px;">No</div></center></td>
-                        <td>
-                          <a href={{"delete/".$plantilla['id']}}> <button  style="font-size: 8px;" type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete!" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-                            <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
-                          </svg></button></a>
-                          <a href={{"EditarPlantilla/".$plantilla['id']}}><button style="font-size: 11px;" type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Edit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
-                            <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
-                          </svg>&nbsp;&nbsp;Editar plantilla</button><br>
-                        </td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
-          </div>
 
-    </section>
     
-   
+    {{-- <footer class="admin-footer">
+        <div class="text-center">
+            <p class="text-warning">&copy; <b>2022 ILAB. Todos los derechos reservados.</b></p>
+        </div>
+    </footer> --}}
 
     
 </body>

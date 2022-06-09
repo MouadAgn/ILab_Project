@@ -268,37 +268,37 @@
 
         <div class="container">
 
-            <form>
-                
+            <form action="/Agregar_Plantilla" methode="Post" enctype="multipart/form-data">
+                @csrf
                 <div class="row">
                     <div class="col-md-3">
                         
                         <label for="clinica">Nombre</label>
                         <div class="input-group">
-                             <input type="text" class="form-control" placeholder="Buscar.." style="height:33px; width:250px;">
+                             <input type="text" class="form-control" name ="nombre" placeholder="Buscar.." style="height:33px; width:250px;">
                         </div>  
 
                     </div>
                     <div class="col-md-3">
                         
-                        <label for="clinica">Nombre Centro Clinica</label>
+                        <label for="clinica">Descripcion</label>
                         <div class="input-group">
-                             <input type="text" class="form-control" placeholder="Buscar.." style="height:33px; width:250px;">
+                             <input type="text" class="form-control" name="descripcion" placeholder="Buscar.." style="height:33px; width:250px;">
                         </div>  
 
                     </div>
-                    <div class="col-md-3">
-                        
-                        <label for="clinica">Clinicas</label>
-                        <div class="input-group">
-                             <input type="text" class="form-control" placeholder="Buscar.." style="height:33px; width:250px;">
-                        </div>  
 
+                    
+                    <div class="col-md-3">
+                        <label for="clinica">Hora Envío Predeterminada</label>
+                        <div class="input-group">
+                             <input type="text" class="form-control" name="hora" placeholder="hh:mm">
+                        </div> 
                     </div>
 
                     <div class="col-md-3">
                         <label for="clinica">Archivo</label>
-                        <input class="form-control" type="file" id="formFile">
+                        <input class="form-control" type="file" name="nombrefichero" id="nombrefichero">
                     </div>
                     
                 </div>
@@ -306,94 +306,29 @@
                 <br>
                
                 <div class="row">
-                    <div class="col-md-3">
-                        
-                        <label for="clinica">Habilitar para Prescriptor</label>
-                        <div class="input-group">
-                            
-                            <select class="selectpicker" style="height:33px; width:250px;"> 
-                                <option value="SI" selected >Si</option>
-                                <option value="NO" >No</option>
-                            </select>
-                          
-                        </div>  
-
-                    </div>
-                    <div class="col-md-3">
-                        
-                        <label for="clinica">Enviar por Horas</label>
-                        <div class="input-group">
-                            
-                            <select class="selectpicker" style="height:33px; width:250px;"> 
-                                <option value="SI" selected >Si</option>
-                                <option value="NO" >No</option>
-                            </select>
-                          
-                        </div>  
-
-                    </div>
-                    <div class="col-md-3">
-                        
-                        <label for="clinica">Suma de Minutos</label>
-                        <div class="input-group">
-                            
-                            <input type="number" id="tentacles" name="tentacles" min="10" max="100" style="height:33px; width:250px;">
-                          
-                        </div>  
-
-                    </div>
-
-                    <div class="col-md-3">
-                        <label for="clinica">Hora Envío Predeterminada</label>
-                        <div class="input-group">
-                             <input type="text" class="form-control" disabled placeholder="formato:hh:mm:ss">
-                        </div> 
-                    </div>
                     
                 </div>
                 
                 <br>
-                <div class="row">
-                    <div class="col-md-3">
-                        
-                        <label for="clinica">Email</label>
-                        <div class="input-group">
-                            
-                            <input type="text   " id="tentacles" name="tentacles" min="10" max="100" style="height:33px; width:250px;">
-                          
-                        </div>  
-
-                    </div>
-
-                    <div class="col-md-3">
-                        
-                        <label for="clinica">Logo</label>
-                        <div class="input-group">
-                            
-                            <input type="text" id="tentacles" name="tentacles" min="10" max="100" style="height:33px; width:250px;">
-                          
-                        </div>  
-
-                    </div>
 
                     <div class="col-md-3"></div>
                 </div>
-               
+                <hr class="section-title-hr">
+                <br>
 
-
+                <button type="submit" class="btn btn-success" style="float:right; margin-top: -6px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M3.5 10a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 0 0 1h2A1.5 1.5 0 0 0 14 9.5v-8A1.5 1.5 0 0 0 12.5 0h-9A1.5 1.5 0 0 0 2 1.5v8A1.5 1.5 0 0 0 3.5 11h2a.5.5 0 0 0 0-1h-2z"/>
+                    <path fill-rule="evenodd" d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"/>
+                  </svg>&nbsp;Guardar y Terminar</button>
 
             </form><br>
-            <hr class="section-title-hr">
-            <br>
-            <button class="btn btn-secondary" id="agregar_cliente" style="margin-top: -5px; width:120px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+
+            <a style="text-decoration: none; color: white;" href="{{url('/Plantillas')}}"> <button class="btn btn-secondary" id="agregar_cliente" style="margin-top: -5px; width:120px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
                 <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
-              </svg></i><a style="text-decoration: none; color: white;" href="{{url('/Plantillas')}}"> &nbsp; Cancelar</a></button>
+              </svg></i>&nbsp; Cancelar</button></a>
 
          
-            <button type="button" class="btn btn-success" style="float:right; margin-top: -6px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-down" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M3.5 10a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 0 0 1h2A1.5 1.5 0 0 0 14 9.5v-8A1.5 1.5 0 0 0 12.5 0h-9A1.5 1.5 0 0 0 2 1.5v8A1.5 1.5 0 0 0 3.5 11h2a.5.5 0 0 0 0-1h-2z"/>
-                <path fill-rule="evenodd" d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"/>
-              </svg>&nbsp;Guardar y Terminar</button>
+
               
             
             
