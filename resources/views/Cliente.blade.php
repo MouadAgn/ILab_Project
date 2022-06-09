@@ -243,7 +243,7 @@
     <a href="{{ url('/Cliente') }}" class="nav_items">Clientes</a></div>
     <div class="item">
     <span class="glyphicon glyphicon-user"></span>
-    <a href="#" class="nav_items">Usuarios</a></div>    
+    <a href="{{ url('/Usuarios') }}" class="nav_items">Usuarios</a></div>    
     </div>
     
 </div>
