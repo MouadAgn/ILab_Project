@@ -312,7 +312,7 @@
                         
                             <label for="clinica">Fecha de Envio</label>
                             <div class="input-group">
-                                 <input type="text" class="form-control" placeholder="Buscar..">
+                                 <input type="date" class="form-control" placeholder="Buscar..">
                             </div>  
                     </div>
 
@@ -328,10 +328,119 @@
                 </div>
 
 
-                
+                <br>
+                <div class="row">
+                    <div class="col-md-3">
+                        
+                            <label for="dni">DNI </label>
+                            
+                            <div class="input-group">
+                                <input type="text" name="dni" class="form-control" placeholder="Buscar..">
+                              </div>
+                    </div>
+                    <div class="col-md-3">
+                        
+                        <label for="fechanac">Fecha de nacimiento </label>
+                        <div class="input-group">
+                            <input type="date" name="fechanac" class="form-control" placeholder="Buscar..">   
+                          </div>
+                    </div>
+                    <div class="col-md-2">
+                        
+                            <label for="sexo">Sexo</label>
+                            <div class="input-group">
+                                <select class="selectpicker" name="sexo" style="height:33px; width: 170px;"> 
+                                    <option value="m">Masculino</option>
+                                    <option value="f" >Feminino</option>
+        
+                                </select>
+                            </div>  
+                    </div>
+
+                    <div class="col-md-2">
+                        
+                        <label for="email">Email</label>
+                        <div class="input-group">
+                            <input type="text" name="email" class="form-control" placeholder="Buscar..">
+                        </div>  
+
+                </div>
+                    
+                </div>
 
 
+                <br>
+                <div class="row">
+                    <div class="col-md-3">
+                        
+                            <label for="email2">Email Alternativo </label>
+                            
+                            <div class="input-group">
+                                <input type="text" name="email2" class="form-control" placeholder="Buscar..">
+                              </div>
+                    </div>
+                    <div class="col-md-3">
+                        
+                        <label for="tel">Tel </label>
+                        <div class="input-group">
+                            <input type="text" name="tel" class="form-control" placeholder="Buscar..">   
+                          </div>
+                    </div>
+                    <div class="col-md-2">
+                        
+                            <label for="muetra">Muestra</label>
+                            <div class="input-group">
+                                <input type="text" name="muestra" class="form-control" placeholder="Buscar..">
+                            </div>  
+                    </div>
+
+                    <div class="col-md-2">
+                        
+                        <label for="pin">Pin</label>
+                        <div class="input-group">
+                            <input type="text" name="pin" class="form-control" placeholder="Buscar..">
+                        </div>  
+
+                    </div>   
+
+                     <div class="col-md-2">
+                    </div>    
+ 
+
+                </div>
+
+
+                <br>
+                <div class="row">
+                    <div class="col-md-5">
+                        
+                            <label for="fechamuestra">Fecha Muestra</label>
+                            
+                            <div class="input-group">
+                                <input type="date" name="fechamuestra" class="form-control" placeholder="Buscar..">
+                              </div>
+                    </div>
+                    <div class="col-md-5">
+                        
+                        <label for="horamuestra">Hora Muestra </label>
+                        <div class="input-group">
+                            <input type="text" name="horamuestra" class="form-control" placeholder="Buscar..">   
+                          </div>
+                    </div>
+
+                    <div class="col-md-2">
+                    </div>
+
+                </div>
+
+
+
                 
+
+                    
+                </div>
+
+
                
                
 
