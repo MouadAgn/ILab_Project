@@ -216,7 +216,7 @@
                               </label>
                             </DIV>
 
-                              <a href="#" style="margin-left: 100px;" >
+                              <a href="{{ URL('/Informes')}}" style="margin-left: 100px;" >
                                 <span></span>
                                 <span></span>
                                 <span></span>
