@@ -242,6 +242,7 @@
 
     <section class="login_div">
         <h5></h5>
+        <img style="margin-left: 50%;" src="{{url('/img/ilab_logo_black.png')}}" alt="Logo" width="100px" height="50px"/>
         <div class="login_infos">
             <p style="color: red; margin-right: 20px; margin-bottom: 5px;">Hola Mouad!</p>
         </div>
