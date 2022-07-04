@@ -26,8 +26,10 @@ class PlantillasController extends Controller
    public function addPlantilla(Request $req){
         $plantilla = new Plantilla();
         $plantilla->Nombre = $req->nombre;
-        $plantilla->NombreFichero = $req->nombrefichero;
-        //$req->file('nombrefichero')->store('plantillas');
+        $file = $req->fichero;
+        $filename = $file->getClientOriginalExtension();
+        $req->file->move('files',$filename);
+        $plantilla->NombreFichero =$filename;
         $plantilla->Descripcion = $req->descripcion;
         $plantilla->Hora = $req->hora;
         $plantilla->save();
@@ -44,7 +46,7 @@ class PlantillasController extends Controller
         $plantilla->Nombre = $req->nombre;
         $plantilla->NombreFichero = $req->nombrefichero;
         $plantilla->Descripcion = $req->descripcion;
-        $plantilla->Hora = $req->Hora;
+        $plantilla->Hora = $req->hora;
         $plantilla->save();
         return redirect('/Plantillas');
     }
@@ -53,5 +55,8 @@ class PlantillasController extends Controller
         $data = Plantilla::find($id);
         $data->delete();
         return redirect('/Plantillas');
+    }
+    public function test(){
+        return redirect("/AgregarPlantilla");
     }
 }

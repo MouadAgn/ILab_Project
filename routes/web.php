@@ -4,8 +4,10 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Validate;
 use App\Models\Clinica;
 use App\Models\Plantilla;
+use App\Models\Informe;
 use App\Http\Controllers\ClinicasController;
 use App\Http\Controllers\PlantillasController;
+use App\Http\Controllers\InformesController;
 
 /*
 C:\Users\OEL\Pictures\projects\Laravel_Projects\ILab_Project\app\Http\Controllers\ClinicasController.php
@@ -114,7 +116,7 @@ Route::view('/Cliente/NuevoCliente','Agregar_Cliente')->name('NuevoCliente');
 
 Route::view('/Usuarios','Usuarios');
 
-Route::view('/Usuarios/NuevoUsuario','AgregarUsuario')->name('NuevoUsuario  ');
+Route::view('/Usuarios/NuevoUsuario','AgregarUsuario')->name('NuevoUsuario');
 
 Auth::routes();
 
@@ -126,12 +128,21 @@ Route::get('Clinicas',[ClinicasController::class,'show']);
 Route::get('/Agregar_Clinica',[ClinicasController::class,'addClinica']);
 Route::get('/Editar_Clinica/{id}',[ClinicasController::class,'showClinica']);
 Route::get('/Editar_Clinica',[ClinicasController::class,'editClinica']);
-Route::get('delete/{id}',[ClinicasController::class,'deleteClinica']);
+Route::get('/DeleteClinica/{id}',[ClinicasController::class,'deleteClinica']);
 
 //Plantilla
-//Route::view('Agregar_Plantilla','Agregar_Plantilla');
+Route::view('/AgregarPlantilla','AgregarPlantilla');
 Route::get('Plantillas',[PlantillasController::class,'show']);
-Route::get('Agregar_Plantilla',[PlantillasController::class,'addPlantilla']);
+Route::post('/AgregarPlantilla',[PlantillasController::class,'addPlantilla'])->name('AgregarPlantilla');
 Route::get('/EditarPlantilla/{id}',[PlantillasController::class,'showPlantilla']);
 Route::get('/EditarPlantilla',[PlantillasController::class,'editPlantilla']);
-Route::get('delete/{id}',[PlantillasController::class,'deletePlantilla']);
+Route::get('/DeletePlantilla/{id}',[PlantillasController::class,'deletePlantilla']);
+
+//Informe
+//Route::view('Agregar_Informe','Agregar_Informe');
+Route::get('Informes',[InformesController::class,'show']);
+Route::get('/AgregarInforme',[InformesController::class,'addInforme']);
+Route::get('/EditarInforme/{id}',[InformesController::class,'showInforme']);
+Route::get('/EditarInforme',[InformesController::class,'editInforme']);
+Route::get('/DeleteInforme/{id}',[InformesController::class,'deleteInforme']);
+

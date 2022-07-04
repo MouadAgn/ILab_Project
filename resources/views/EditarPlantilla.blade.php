@@ -270,6 +270,7 @@
 
             <form action="/EditarPlantilla" methode="Post" enctype="multipart/form-data">
                 @csrf
+                <input type="hidden" name="id" value="{{$data['id']}}">
                 <div class="row">
                     <div class="col-md-3">
                         
